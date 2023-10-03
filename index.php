@@ -1,11 +1,10 @@
 <?php
-	//Now, let's play
+
 	$returnText = 'You have not played yet. Select your weapon and hit the Play button';
+
 	if (userHasValidSelection()) {
 		$userChoice = $_GET['userSelect'];
-		//Let the computer make a choice
 		$computerChoice = letComputerChoose();
-		//Now, let's play, and return the result  text!
 		$returnText = "The server chose $computerChoice. ";
 		$result = compare($userChoice, $computerChoice);
 		if($result == 0) {
@@ -101,4 +100,5 @@ function compare($choice1, $choice2) {
 		}
 	}
 }
-?>
+
+// Code created by dwaard on Github
